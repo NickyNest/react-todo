@@ -1,0 +1,46 @@
+
+{
+    "coverageThreshold": {
+        "global": {
+            "statements": 50,
+            "branches": 50,
+            "functions": 50,
+            "lines": 50
+        }
+    },
+    "collectCoverage": true,
+    "testRegex": "src/.*/.*test.js",
+    "transform": {
+        ".*": "<rootDir>/tools/jestAliasPreProcessor"
+    },
+    "moduleNameMapper": {
+        "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|css)$": "<rootDir>/src/__mocks__/fileMock.js"
+    },
+    "moduleFileExtensions": [
+        "js",
+        "es6",
+        "jsx",
+        "json"
+    ],
+    "testPathIgnorePatterns": [
+        "<rootDir>/node_modules/",
+        "/__snapshots__/",
+        "/__mocks__/",
+        "/__fakeApi__/",
+        "/__fakeData__/"
+    ],
+    "coveragePathIgnorePatterns": [
+        "src/.+\\.test\\.js",
+        "<rootDir>/node_modules/",
+        "/__snapshots__/",
+        "/__mocks__/",
+        "/__fakeApi__/",
+        "/__fakeData__/",
+        "src/app/styles/",
+        "src/images/",
+        "tools/"
+    ],
+    "snapshotSerializers": [
+        "enzyme-to-json/serializer"
+    ]
+}

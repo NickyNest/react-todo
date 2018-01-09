@@ -1,0 +1,38 @@
+{
+    "presets": [
+        "react",
+        "stage-3",
+        [
+            "es2015",
+            {
+                "modules": false,
+                "loose": true
+            }
+        ]
+    ],
+    "plugins": [
+        "transform-class-properties"
+    ],
+    "env": {
+        "development": {
+            "plugins": [
+                "react-hot-loader/babel"
+            ]
+        },
+        "production": {
+            "plugins": [
+                "transform-react-remove-prop-types",
+                "transform-react-inline-elements",
+                "transform-react-constant-elements",
+                "ramda",
+                "lodash"
+            ]
+        },
+        "test": {
+            "plugins": [
+                "transform-es2015-modules-commonjs",
+                "transform-runtime"
+            ]
+        }
+    }
+}
